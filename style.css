@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --cor-fundo: #f4f5f3;
+    --cor-cartao: #ffffff;
+    --cor-primaria: #1b5e4a;
+    --cor-primaria-hover: #144738;
+    --cor-marca: #42b883;
+    --cor-texto-escuro: #111827;
+    --cor-texto-suave: #6b7280;
+    --cor-texto-claro: #9ca3af;
+    --cor-borda: #e5e7eb;
+    --cor-fundo-demo: #f3f4f6;
+    --raio-borda: 16px;
+    --raio-campo: 10px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contentor-fluxo {
+    margin-bottom: 24px;
+}
+
+.passos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cor-texto-suave);
+}
+
+.caixa-icone {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.caixa-icone.preenchida {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.caixa-icone.contornada {
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-suave);
+    background-color: #ffffff;
+}
+
+.passo.ativo .texto-passo {
+    color: var(--cor-texto-escuro);
+    font-weight: 600;
+}
+
+.identificador-tela {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 16px;
+}
+
+.cartao-login {
+    background-color: var(--cor-cartao);
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--raio-borda);
+    padding: 40px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.icone-logo {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+}
+
+.icone-logo span {
+    width: 8px;
+    background-color: var(--cor-marca);
+    border-radius: 4px;
+}
+
+.icone-logo span:nth-child(1) { height: 20px; }
+.icone-logo span:nth-child(2) { height: 28px; }
+.icone-logo span:nth-child(3) { height: 24px; }
+
+.nome-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    letter-spacing: -0.5px;
+}
+
+.cabecalho-form {
+    margin-bottom: 28px;
+}
+
+.etapa-info {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 8px;
+}
+
+.titulo-boas-vindas {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo-instrucao {
+    font-size: 15px;
+    color: var(--cor-texto-suave);
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rotulo-campo {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+}
+
+.caixa-entrada {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-campo);
+    padding: 0 14px;
+    height: 48px;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.caixa-entrada:focus-within {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(27, 94, 74, 0.1);
+}
+
+.icone-campo {
+    color: var(--cor-texto-claro);
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.caixa-entrada input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: var(--cor-texto-escuro);
+    background: transparent;
+}
+
+.caixa-entrada input::placeholder {
+    color: var(--cor-texto-claro);
+}
+
+.botao-mostrar-senha {
+    background: none;
+    border: none;
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.botao-mostrar-senha:hover {
+    color: var(--cor-texto-suave);
+}
+
+.linha-opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.opcao-lembrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.opcao-lembrar input[type="checkbox"] {
+    accent-color: var(--cor-primaria);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.texto-checkbox {
+    color: var(--cor-texto-suave);
+}
+
+.link-esqueci {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-esqueci:hover {
+    text-decoration: underline;
+}
+
+.botao-entrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--raio-campo);
+    height: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.botao-entrar:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.ambiente-demo {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.rotulo-demo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--cor-texto-claro);
+    margin-bottom: 8px;
+}
+
+.credenciais-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--cor-fundo-demo);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+    font-family: monospace;
+}
+
+.separador {
+    color: var(--cor-texto-claro);
+}
