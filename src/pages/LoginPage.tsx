@@ -1,4 +1,3 @@
-import { AuthSteps } from '../components/AuthSteps';
 import { Brand } from '../components/Brand';
 import { FormField } from '../components/FormField';
 import { Icon } from '../components/Icon';
@@ -6,19 +5,10 @@ import { Icon } from '../components/Icon';
 export function LoginPage() {
   return (
     <div className="login-page">
-      <header className="page-header">
-        <span className="workspace-label">PLATAFORMA DE GESTÃO</span>
-        <span className="prototype-badge"><span /> Protótipo estático</span>
-      </header>
-
       <main className="auth-layout">
-        <AuthSteps />
-        <p className="screen-label"><span>TELA 01</span><span aria-hidden="true">/</span>LOGIN</p>
-
         <section className="login-card" aria-labelledby="login-title">
           <Brand />
           <div className="form-heading">
-            <p className="eyebrow"><span /> SEU ESPAÇO DE TRABALHO</p>
             <h1 id="login-title">Boas-vindas de volta<span>.</span></h1>
             <p>Acesse o painel para acompanhar sua operação.</p>
           </div>
@@ -35,16 +25,16 @@ export function LoginPage() {
             <p id="prototype-note" className="prototype-note">Tela demonstrativa. O acesso ainda não está conectado.</p>
           </form>
 
-          <aside className="demo-section" aria-label="Credenciais ilustrativas">
-            <div className="demo-title"><span /> AMBIENTE DEMONSTRATIVO <span /></div>
-            <div className="demo-credentials"><code>admin@elesys.com</code><span aria-hidden="true">·</span><code>Elesys123</code></div>
-          </aside>
         </section>
 
-        <p className="access-note"><Icon name="shield" size={16} /> Tudo começa com uma gestão mais simples.</p>
+        <details className="demo-section">
+          <summary>Credenciais de demonstração</summary>
+          <div className="demo-credentials"><code>admin@elesys.com</code><span aria-hidden="true">·</span><code>Elesys123</code></div>
+          <p>Dados ilustrativos, sem autenticação ativa.</p>
+        </details>
       </main>
 
-      <footer className="page-footer"><span>© {new Date().getFullYear()} Elesys</span><span>Mais clareza. Mais controle.</span></footer>
+      <footer className="page-footer"><span>© {new Date().getFullYear()} Elesys</span></footer>
     </div>
   );
 }

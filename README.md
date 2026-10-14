@@ -22,7 +22,7 @@ npm run preview
 
 ```text
 src/
-  components/    # Marca, ícones, etapas e campos reutilizáveis
+  components/    # Marca, ícones e campos reutilizáveis
   pages/         # Composição da tela de login
   styles/        # Tokens visuais, estilos e responsividade
   App.tsx        # Componente principal
@@ -31,7 +31,7 @@ src/
 
 ## Escopo
 
-Este projeto é um exercício de interface. Os campos e o checkbox usam o comportamento nativo do navegador. Enviar o formulário não navega, não armazena credenciais e não faz requisições. Os controles de recuperação e exibição de senha estão desabilitados; as etapas são apenas visuais. As credenciais exibidas são ilustrativas.
+Este projeto é um exercício de interface. Os campos e o checkbox usam o comportamento nativo do navegador. Enviar o formulário não navega, não armazena credenciais e não faz requisições. Os controles de recuperação e exibição de senha estão desabilitados. As credenciais exibidas são ilustrativas.
 
 Autenticação, recuperação de senha, estados de carregamento/erro, navegação e integração com backend ficam para a próxima etapa do aprendizado. Não há serviços de API, sessão, mocks de backend ou implementação de autenticação pronta.
 
